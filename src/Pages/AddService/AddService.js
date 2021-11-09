@@ -6,7 +6,7 @@ const AddService = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post("http://localhost:5000/services", data)
+        axios.post("https://car-genius.herokuapp.com/services", data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully Added');
